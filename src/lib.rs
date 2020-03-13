@@ -113,3 +113,6 @@ macro_rules! mods {
         $($($vis mod $mod;)+)+
     };
 }
+
+#[cfg(test)]
+mod tests;
