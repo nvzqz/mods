@@ -62,6 +62,20 @@ mod g;
 mod h;
 ```
 
+## Wishful Thinking
+
+It would be wonderful if we could instead have:
+
+```rust
+pub mod puppy, kitty;
+```
+
+Or a syntax that matches `use` imports:
+
+```rust
+pub mod {puppy, kitty};
+```
+
 ## Changes
 
 See [`CHANGELOG.md`] for an exhaustive list of what has changed from one

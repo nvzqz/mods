@@ -38,6 +38,20 @@
 //! mod h;
 //! ```
 //!
+//! # Wishful Thinking
+//!
+//! It would be wonderful if we could instead have:
+//!
+//! ```rust,ignore
+//! pub mod puppy, kitty;
+//! ```
+//!
+//! Or a syntax that matches `use` imports:
+//!
+//! ```rust,ignore
+//! pub mod {puppy, kitty};
+//! ```
+//!
 //! # Changes
 //!
 //! See [`CHANGELOG.md`] for an exhaustive list of what has changed from one
@@ -106,6 +120,20 @@
 /// pub(super) mod f;
 /// mod g;
 /// mod h;
+/// ```
+///
+/// # Wishful Thinking
+///
+/// It would be wonderful if we could instead have:
+///
+/// ```rust,ignore
+/// pub mod puppy, kitty;
+/// ```
+///
+/// Or a syntax that matches `use` imports:
+///
+/// ```rust,ignore
+/// pub mod {puppy, kitty};
 /// ```
 #[macro_export]
 macro_rules! mods {
