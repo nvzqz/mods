@@ -24,8 +24,8 @@
 
 Simpler module declaration, brought to you by [@NikolaiVazquez]!
 
-This library enables you to declare modules in ways the current syntax
-doesn't allow.
+This library enables you to declare modules in ways the current syntax doesn't
+allow.
 
 ## Examples
 
@@ -48,8 +48,8 @@ mods::mods! {
 }
 ```
 
-Without the `mods!` macro, the same code is much less succinct. This is what
-the macro expands out to:
+Without the `mods!` macro, the same code is much less succinct. This is what the
+macro expands out to:
 
 ```rust
 pub mod a;
@@ -78,8 +78,8 @@ pub mod {puppy, kitty};
 
 ## Changes
 
-See [`CHANGELOG.md`] for an exhaustive list of what has changed from one
-version to another.
+See [`CHANGELOG.md`] for an exhaustive list of what has changed from one version
+to another.
 
 ## License
 
