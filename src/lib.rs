@@ -38,6 +38,11 @@
 //! mod h;
 //! ```
 //!
+//! # Changes
+//!
+//! See [`CHANGELOG.md`] for an exhaustive list of what has changed from one
+//! version to another.
+//!
 //! # License
 //!
 //! This project is released under either:
