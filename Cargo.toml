@@ -1,0 +1,13 @@
+[package]
+name = "mods"
+version = "1.0.0"
+authors = ["Nikolai Vazquez"]
+license = "MIT OR Apache-2.0"
+description = "Simpler module declaration."
+repository = "https://github.com/nvzqz/mods"
+homepage = "https://github.com/nvzqz/mods"
+documentation = "https://docs.rs/mods"
+categories = ["no-std", "rust-patterns"]
+keywords = ["module", "macro"]
+readme = "README.md"
+include = ["Cargo.toml", "src", "README*", "CHANGELOG*", "LICENSE*"]
