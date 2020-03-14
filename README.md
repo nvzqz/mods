@@ -11,7 +11,7 @@
     <a href="https://github.com/nvzqz/mods/actions?query=workflow%3ACI">
         <img src="https://github.com/nvzqz/mods/workflows/CI/badge.svg" alt="Build Status">
     </a>
-    <img src="https://img.shields.io/badge/rustc-^1.30.0-blue.svg" alt="rustc ^1.30.0">
+    <img src="https://img.shields.io/badge/rustc-^1.9.0-blue.svg" alt="rustc ^1.9.0">
     <br>
     <a href="https://www.patreon.com/nvzqz">
         <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!" height="35">
