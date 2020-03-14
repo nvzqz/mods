@@ -7,5 +7,7 @@ mods! {
     a, b, c;
 }
 
+mods! {}
+
 // Check that the module is actually declared.
 pub use self::puppy::Dog;

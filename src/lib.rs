@@ -137,10 +137,13 @@
 /// ```
 #[macro_export]
 macro_rules! mods {
+    () => {};
+
     // Trailing comma
     ($($vis:vis $($mod:ident,)+;)+) => {
         $($($vis mod $mod;)+)+
     };
+
     // No trailing comma
     ($($vis:vis $($mod:ident),+;)+) => {
         $($($vis mod $mod;)+)+
