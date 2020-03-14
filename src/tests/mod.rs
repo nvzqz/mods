@@ -2,7 +2,8 @@
 
 mods! {
     pub puppy, kitty;
-    pub(crate) x, y;
+    pub(crate) x;
+    pub(in super::tests) y;
     a, b, c;
 }
 
