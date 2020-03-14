@@ -36,7 +36,7 @@ jobs:
         with:
           command: test
 
-  test:
+  test_msrv:
     name: Test Suite
     runs-on: ubuntu-latest
     steps:
