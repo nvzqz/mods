@@ -25,20 +25,30 @@ jobs:
   test:
     name: Test Suite
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        rust:
-          - stable
-          - 1.30.0
-          - 1.6.0
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: ${{ matrix.rust }}
+          toolchain: stable
           override: true
       - uses: actions-rs/cargo@v1
+        with:
+          command: test
+
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: 1.6.0
+          override: true
+      - uses: actions-rs/cargo@v1
+        env:
+          RUSTFLAGS: --cfg no_pub_special # No `pub(crate)`, `pub(in ...)`
         with:
           command: test
 

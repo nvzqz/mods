@@ -2,9 +2,13 @@
 
 mods! {
     pub puppy, kitty;
+    a, b, c;
+}
+
+#[cfg(not(no_pub_special))]
+mods! {
     pub(crate) x;
     pub(in super::tests) y;
-    a, b, c;
 }
 
 mods! {}
