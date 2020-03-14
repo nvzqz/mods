@@ -30,6 +30,7 @@ jobs:
         rust:
           - stable
           - 1.30.0
+          - 1.6.0
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
