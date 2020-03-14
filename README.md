@@ -78,8 +78,8 @@ This library requires Rust 1.9.0 as the minimum version and will work with all
 subsequent versions.
 
 This is because  previous versions can't have `mod x;` declarations within
-submodules [When testing this](https://github.com/nvzqz/mods/runs/508242550) we
-get an error complaining that the module file is not inside the directory "src".
+submodules. [When testing this][msrv-test], we get an error complaining that the
+module file is not inside the directory "src".
 
 ### Rust 2015
 
@@ -129,4 +129,5 @@ This project is released under either:
 [`Cargo.toml`]:    https://doc.rust-lang.org/cargo/reference/manifest.html
 [`CHANGELOG.md`]:  https://github.com/nvzqz/mods/blob/master/CHANGELOG.md
 [crate]:           https://crates.io/crates/mods
+[msrv-test]:       https://github.com/nvzqz/mods/runs/508242550
 [Rust 2018]:       https://blog.rust-lang.org/2018/12/06/Rust-1.31-and-rust-2018.html#rust-2018
