@@ -6,17 +6,12 @@ jobs:
   check:
     name: Check
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        rust:
-          - stable
-          - 1.30.0
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: ${{ matrix.rust }}
+          toolchain: stable
           override: true
       - uses: actions-rs/cargo@v1
         with:
@@ -37,14 +32,14 @@ jobs:
           command: test
 
   test_msrv:
-    name: Test Suite
+    name: 'Test Suite (MSRV = 1.9.0)'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: 1.6.0
+          toolchain: 1.9.0
           override: true
       - uses: actions-rs/cargo@v1
         env:
@@ -87,17 +82,12 @@ jobs:
   doc:
     name: Rustdoc
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        rust:
-          - stable
-          - 1.30.0
     steps:
       - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: ${{ matrix.rust }}
+          toolchain: stable
           override: true
       - uses: actions-rs/cargo@v1
         env:
