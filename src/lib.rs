@@ -140,38 +140,38 @@ macro_rules! mods {
     () => {};
 
     // Trailing comma
-    (pub $($mod:ident,)+; $($rest:tt)*) => {
-        $(pub mod $mod;)+
+    (pub $($module:ident,)+; $($rest:tt)*) => {
+        $(pub mod $module;)+
         mods! { $($rest)* }
     };
-    (pub($vis:ident) $($mod:ident,)+; $($rest:tt)*) => {
-        $(pub($vis) mod $mod;)+
+    (pub($vis:ident) $($module:ident,)+; $($rest:tt)*) => {
+        $(pub($vis) mod $module;)+
         mods! { $($rest)* }
     };
-    (pub(in $vis:path) $($mod:ident,)+; $($rest:tt)*) => {
-        $(pub(in $vis) mod $mod;)+
+    (pub(in $vis:path) $($module:ident,)+; $($rest:tt)*) => {
+        $(pub(in $vis) mod $module;)+
         mods! { $($rest)* }
     };
-    ($($mod:ident,)+; $($rest:tt)*) => {
-        $(mod $mod;)+
+    ($($module:ident,)+; $($rest:tt)*) => {
+        $(mod $module;)+
         mods! { $($rest)* }
     };
 
     // No trailing comma
-    (pub $($mod:ident),+; $($rest:tt)*) => {
-        $(pub mod $mod;)+
+    (pub $($module:ident),+; $($rest:tt)*) => {
+        $(pub mod $module;)+
         mods! { $($rest)* }
     };
-    (pub($vis:ident) $($mod:ident),+; $($rest:tt)*) => {
-        $(pub($vis) mod $mod;)+
+    (pub($vis:ident) $($module:ident),+; $($rest:tt)*) => {
+        $(pub($vis) mod $module;)+
         mods! { $($rest)* }
     };
-    (pub(in $vis:path) $($mod:ident),+; $($rest:tt)*) => {
-        $(pub(in $vis) mod $mod;)+
+    (pub(in $vis:path) $($module:ident),+; $($rest:tt)*) => {
+        $(pub(in $vis) mod $module;)+
         mods! { $($rest)* }
     };
-    ($($mod:ident),+; $($rest:tt)*) => {
-        $(mod $mod;)+
+    ($($module:ident),+; $($rest:tt)*) => {
+        $(mod $module;)+
         mods! { $($rest)* }
     };
 }
